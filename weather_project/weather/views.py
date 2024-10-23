@@ -9,7 +9,7 @@ import datetime
 def weather(request):
     if request.method == 'POST':
         city = request.POST['city']
-        source = urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=9d5eb6530d38019fea5ebec886a177e6').read()
+        source = urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid=YOUR_API').read()
 
         list_of_data = json.loads(source)
 
